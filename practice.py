@@ -1212,33 +1212,3 @@ print(store)
 print(type(store))    
 # sdata=sum(alldata)
 # print(sdata)"""
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-
-  
-
-
-
-
-
-
-        
-           
-
-
-    
