@@ -1212,3 +1212,16 @@ print(store)
 print(type(store))    
 # sdata=sum(alldata)
 # print(sdata)"""
+
+# if divisible by 3 fizz and divisible by 5 buzz
+user=int(input("Enter the num: "))
+if user%3==0 and user%5==0:
+    print("fizz buzz")
+elif user%5==0:
+    print("buzz")
+elif user%3==0:
+    print("fizz")
+else:
+    print(user)            
+
+
