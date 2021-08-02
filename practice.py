@@ -1214,7 +1214,7 @@ print(type(store))
 # print(sdata)"""
 
 # if divisible by 3 fizz and divisible by 5 buzz
-user=int(input("Enter the num: "))
+"""user=int(input("Enter the num: "))
 if user%3==0 and user%5==0:
     print("fizz buzz")
 elif user%5==0:
@@ -1222,6 +1222,34 @@ elif user%5==0:
 elif user%3==0:
     print("fizz")
 else:
-    print(user)            
+    print(user)        """
+
+#reverse string
+"""word='cat'    
+nap=""
+for i in range(len(word)):
+    nap+=word[len(word)-i-1]
+print(nap)"""
+lis1=[1,3,5,7,45,23]
+lis2=[1,3,5,6,11,23]
+lis3=[]
+
+for i in range(0,len(lis1)): 
+    lis3.append(lis1[i]+lis2[i])    
+
+print(str(lis3))   
+
+# lt1 = [5, 10, 15, 20, 25, 30]  
+# lt2 = [2, 4, 6, 8, 10, 12]  
+# res_lt = [] # declaration of the list  
+# for x in range (0, len (lt1)):  
+#     res_lt.append( lt1[x] + lt2[x])  
+  
+# # Display the sum of two list in Python  
+# print ( " Addition of the list lt1 and lt2 is: " + str (res_lt))  
+
+
+
+    
 
 
