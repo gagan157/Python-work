@@ -1236,7 +1236,6 @@ lis3=[]
 
 for i in range(0,len(lis1)): 
     lis3.append(lis1[i]+lis2[i])    
-
 print(str(lis3))   
 
 # lt1 = [5, 10, 15, 20, 25, 30]  
