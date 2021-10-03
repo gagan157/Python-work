@@ -1230,14 +1230,16 @@ nap=""
 for i in range(len(word)):
     nap+=word[len(word)-i-1]
 print(nap)"""
-lis1=[1,3,5,7,45,23]
+
+#Add to list
+"""lis1=[1,3,5,7,45,23]
 lis2=[1,3,5,6,11,23]
 lis3=[]
 
 
 for i in range(0,len(lis1)): 
     lis3.append(lis1[i]+lis2[i])    
-print(str(lis3))   
+print(str(lis3))   """
 
 # lt1 = [5, 10, 15, 20, 25, 30]  
 # lt2 = [2, 4, 6, 8, 10, 12]  
@@ -1246,7 +1248,53 @@ print(str(lis3))
 #     res_lt.append( lt1[x] + lt2[x])  
   
 # # Display the sum of two list in Python  
-# print ( " Addition of the list lt1 and lt2 is: " + str (res_lt))  
+# print ( " Addition of the list lt1 and lt2 is: " + str (res_lt))
+
+
+
+
+
+#decorater use   
+
+'''def deco(fun):
+    def inner():
+        n,i=fun()
+        n='gagan'
+        i=40
+        return n,i
+    return inner    
+
+@deco
+def remo():
+    name='anyname'
+    ids=45
+    return name,ids    
+
+print(remo())
+data=deco(remo)
+print(data())'''
+
+
+class student:
+    ocuupation = "programmer"
+    def __init__(self):                     #constructor
+        self.class_section = 9              #instance or object variable
+        print("Contructor")
+
+    def stu(self,std_name):                 #instance method
+        self.name= std_name 
+        print("instance method")                
+        print("my name is ",self.name,"and my class is ",self.class_section)
+
+    @classmethod        
+    def info(cls):                             #class method
+        print("class method")
+        print("i am a ",cls.ocuupation)
+
+st = student()
+st.info()
+st.stu("gagan")
+
 
 
 

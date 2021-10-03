@@ -39,7 +39,9 @@ def getnews():
     for indexo in range(10):        
         heads=data["articles"][indexo]["title"]
         urlnews=data["articles"][indexo]["url"]
-        if indexo>0 and indexo<9:
+        if indexo==0:
+            speak("First news is")
+        elif indexo>0 and indexo<9:
             speak("next news is")
         elif indexo==9:
             speak("last news is") 

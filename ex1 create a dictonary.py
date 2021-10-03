@@ -2,8 +2,40 @@
 # json.loads()--------->  It is used to convert a json string to an dictonary
 # json.dump()---------> It is used to convert a dictonary to an json string.
 # josn.load()----------> It is used to read a file which contains an json object
-import requests
 import json
+import requests
+
+url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
+
+querystring = {"term":"table"}
+
+headers = {
+    'x-rapidapi-host': "mashape-community-urban-dictionary.p.rapidapi.com",
+    'x-rapidapi-key': "ddeccbe1f3msh650612f7533c589p1175dajsn272f108ae4df"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+data=json.loads(response.text)
+dics=data["list"]
+for da in dics:
+        print(da['definition'] ," ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 worddic={"immutable":"meaning is cantnot change the value ex tuple","muttable":"meaning is can change the value",
         "Gagan":"that name meaning is sky","pc":"this world meaing is personal computer"}
