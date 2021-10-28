@@ -1275,7 +1275,7 @@ data=deco(remo)
 print(data())'''
 
 
-class student:
+"""class student:
     ocuupation = "programmer"
     def __init__(self):                     #constructor
         self.class_section = 9              #instance or object variable
@@ -1293,7 +1293,9 @@ class student:
 
 st = student()
 st.info()
-st.stu("gagan")
+st.stu("gagan")"""
+
+
 
 
 

@@ -86,15 +86,43 @@ def playmusic():
         pygame.mixer.music.stop()
         
 
+#Timer countdown
+class Timer():
+    def getusertime(user_inp):
+        userdatas=user_inp.split(" ")
+        userdata=[0,0,0]
+        for inde,val in enumerate(userdatas):            
+            if val.isdigit():
+                if inde==0:
+                    userdata[0]=val
+                if inde==1:
+                    userdata[1]=val
+                if inde==2:
+                    userdata[2]=val
+            else:
+                check = val[-1]
+                if check == 'h':    
+                    vals=val[:-1]
+                    userdata[0]=vals
+                if check == 'm':    
+                    vals=val[:-1]
+                    userdata[1]=vals
+                if check == 's':    
+                    vals=val[:-1]
+                    userdata[2]=vals
+                
+          
 
-class Timer():    
-    def timer():
-        user_inp=input("Enter timmer EX: 00h 00m 00s: ")
-        
-        userdata=user_inp.split(" ")
-        hour= int(userdata[0])
-        mins= int(userdata[1])
-        sec= int(userdata[2])
+        hour = int(userdata[0])
+        mins = int(userdata[1])
+        sec = int(userdata[2])
+
+        return hour,mins,sec
+
+    def timers(user_inp):
+
+        hour,mins,sec=Timer.getusertime(user_inp)       
+        userdata=[hour,mins,sec]
         usercopy = userdata.copy()
         
         currenttime=datetime.datetime.now()
@@ -112,7 +140,7 @@ class Timer():
             mins-=60
             hour+=1
 
-        if hour>=12:
+        if hour>12:
             hour-=12    
         usertim = f"{hour} {mins} {sec}"
         hr=int(usercopy[0])
@@ -131,13 +159,13 @@ class Timer():
             tim = f"{hours} {minss} {secs}"           
             time.sleep(1)
 
-            h=int(seconds/3600)
+            h=int(seconds//3600)
             m=int(seconds//60)
             if m > 60:
-                 m = (m % 60)
+                m = (m % 60)
                 
             s=seconds%60
-            timer = '{:02d}:{:02d}:{:02d}'.format(h, m, int(s))
+            timer = '{:02d}h:{:02d}m:{:02d}s'.format(h, m, int(s))
             print(timer, end="\r")
             # time.sleep(1)
             seconds-=1
@@ -151,7 +179,7 @@ class Timer():
 
 
 
-class countdown():
+"""class countdown():
     @staticmethod
     def timer(hr,mn,se):
         h=hr*3600
@@ -172,14 +200,21 @@ class countdown():
             print(timer, end="\r")
             time.sleep(1)
             seconds-=1
-            
+            """
            
 
 
 
 if __name__=="__main__":
-    # remind_me()                
-    Timer.timer()
+    dis_uiser=input("Select S for Set Alaram OR T for Timer Countdown: ")
+    dis_uiser=dis_uiser.upper()
+    if dis_uiser == "S":
+        remind_me()
+    elif dis_uiser == "T":    
+        user_inp=input("Enter timmer EX: 00h 00m  00s : ")                
+        Timer.timers(user_inp)
+    else:
+        print("Wrong Input")    
     # t = input("Enter the time in seconds: ")
   
    

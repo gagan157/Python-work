@@ -1,5 +1,4 @@
-from os import name
-from requests import status_codes
+
 from win32com.client import Dispatch
 import requests
 import json

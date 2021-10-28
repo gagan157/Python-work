@@ -178,3 +178,82 @@ i=1
 #     i+=1
 
 
+
+# using forloop
+#Normal shape of star without front space 
+us=11
+"""for i in range(us):
+    for j in range(i):
+        print("*",end="")
+    print()   
+for i in range(us):
+    # print("row")         
+    for counter in range(us,0,-1):   
+        #print col 
+        print("*",end="")          
+    print()
+    us-=1   """   
+        
+
+#Star shape whith front of space 
+"""for i in range(us):
+    for j in range(us,i,-1):    #first space in coloumn run like dicrement
+        print(' ',end="")   
+               
+    for colo in range(i+1):     #and print *  run like increment
+        print("*",end="")
+                        #end line col
+    print() 
+
+for i in range(us):
+    for colo in range(i+1):     #first space run increment in coloum
+        print(" ",end="")
+    for j in range(us,i,-1):    #second decrement star
+        print('*',end="")     
+               
+    print()"""
+
+
+
+
+#Dimond Shape of star pattern 
+    
+
+"""for i in range(us):
+    for j in range(us,i,-1):    #first space in coloumn run like dicrement
+        print(' ',end="")   
+               
+    for colo in range(i+1):     #and print *  run like increment
+        print("*",end="")
+                        #end line col
+
+    #another part
+    for j in range(i):
+        print("*",end="")
+
+    print() 
+
+for i in range(us):
+    for colo in range(i+1):     #first space run increment in coloum
+        print(" ",end="")
+    for j in range(us,i,-1):    #second decrement star
+        print('*',end="")     
+
+    for counter in range(us,i+1,-1):   
+#         #print col 
+        print("*",end="")                   
+    print()"""
+
+
+
+# for row in range(1,5+1,1):
+#     for col in range(1,row+1):
+#         print(col,end="")  #print row or col
+#     print()    
+
+# k=1
+# for row in range(5):
+#     for col in range(5-row,0,-1):
+#         print(col,end="")
+#     k+=1
+#     print()    
